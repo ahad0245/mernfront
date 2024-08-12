@@ -5,7 +5,7 @@ function EmployeeList() {
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/employees')
+    axios.get('https://mern-backend-api.vercel.app/employees')
       .then(response => setEmployees(response.data))
       .catch(error => console.error('Error fetching employees:', error));
   }, []);

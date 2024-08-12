@@ -15,7 +15,7 @@ function AddEmployee() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/employees', formData)
+    axios.post('https://mern-backend-api.vercel.app/employees', formData)
       .then(response => {
         alert('Employee added!');
         setFormData({ name: '', position: '', department: '', salary: '' });
